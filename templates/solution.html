@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=gb2312" /><title>
+	擎翌智能-整体解决方案
+</title>
+<meta name="keywords" content="智能交通，擎翌，智慧停车，智慧公交，擎翌智能科技有限公司" />
+<meta name="description" content="擎翌智能科技有限公司提供智能交通、智慧停车、智慧公交等高科技智能交通解决方案" />
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/jquery.db_tabmotionbanner.min.js"></script>
+    <link href="css/common.css" rel="stylesheet" /><link rel="stylesheet" href="css/style.css" /><link href="css/mycss.css" rel="stylesheet" />
+    <script type="text/javascript">
+        $(function () {
+            $(".top1SS").mouseover(function () {
+                $(".top1RSS").show();
+            }).mouseout(function () {
+                $(".top1RSS").hide();
+            });
+            $(".top1RSS").mouseover(function () {
+                $(".top1RSS").show();
+                $(".top1SS").addClass("top1SSSel");
+            }).mouseout(function () {
+                $(".top1RSS").hide();
+                $(".top1SS").removeClass("top1SSSel");
+            });
+        })
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $(".top1Nav").mouseover(function () {
+                $(".topRightNav").show();
+            }).mouseout(function () {
+                $(".topRightNav").hide();
+            });
+            $(".topRightNav").mouseover(function () {
+                $(".topRightNav").show();
+                $(".top1Nav").addClass("top1NavSel");
+            }).mouseout(function () {
+                $(".topRightNav").hide();
+                $(".top1Nav").removeClass("top1NavSel");
+            });
+        })
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $(window).scroll(function () {
+                if ($(window).scrollTop() == 0) {
+                    $(".top1").fadeIn(200);
+                }
+                else {
+                    $(".top1").fadeOut(0);
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $(".floatClose").click(function () { $(".leftFloat").hide(); })
+        })
+    </script>
+    <!--[if IE 6]>
+ <script src="js/PNGfix.js"></script>
+ <script>
+   DD_belatedPNG.fix('IMG,div,input,png');
+ </script>
+<![endif]-->
+    <script type="text/javascript">
+        function aa() {
+            var tab = document.getElementById("soso").value;
+            document.location = 'productslist.aspx?name=' + tab;
+        }
+    </script>
+    
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+            $("#m4").addClass("mainNavActive");
+
+            $("#about").addClass("aa");
+            $("#news").addClass("aa");
+            //$("#solutions").addClass("aa");
+            $("#case").addClass("aa");
+            $("#contact").addClass("aa");
+            $("#pro").addClass("aa");
+			$("#service").addClass("aa");
+            $("#cooperation").addClass("aa");
+        }); 
+    </script>
+    <style type="text/css">
+        .aa
+        {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+ {include file='header.html'}
+    
+    <div class="content">
+        <div class="nyMainTu">
+        </div>
+        <div class="nyMain">
+            {include file='left.html'}
+            <div class="nyMainRight">
+                <h1 class="nyMainRightH1">
+                    <span>
+                        <img alt="" src="images/nyIco.jpg" />
+                        首页 &gt; 解决方案 &gt;{$arrtext[$type]}</span>{$arrtext[$type]}</h1>
+             
+
+                <div id="ContentPlaceHolder1_u1">
+	
+                        <ul class="nyMainMidMidUl">
+                            {section name=sn loop=$article}
+                                    <li><span class="nyMainMidCont2"><a href="solution_infor.php?id={$article[sn].id}&type={$article[sn].type}">
+                                        {$article[sn].title}</a></span>
+                                        <div class="clear">
+                                        </div>
+                                        <div class="nyCaseC">
+                                            <div class="nyCasePic">
+                                                <a href="solution_infor.php?id={$article[sn].id}&type={$article[sn].type}">
+                                                    <img src="./uploads/{$article[sn].logo}" alt="" width="120px" height="75px" /></a></div>
+                                            <div class="nyCaseWord">
+                                                {$article[sn].content|truncate:'150'}
+											</div>
+                                            <div class="clear">
+                                            </div>
+                                        </div>
+                                    </li>
+									{/section}
+                        </ul>
+                        <div>
+                            <div style="width:100%;height:25px; line-height:25px;color:black;"><div style="float:left; padding-left:10px;color:black;"><span style="font-weight:normal; ">共有</span><span style="color:#ff0000">{$datasize}</span><span style="font-weight:normal ">条记录，</span>&nbsp;<span style="font-weight:normal ">当前第</span><span style="color:#ff0000">{$page}</span><span style="font-weight:normal ">页，共<span style="color:#ff0000;">{$countpage}</span><span style="font-weight:normal ">页</span>&nbsp;&nbsp;</div>
+							<div style="float:right; padding-right:5px; white-space:nowrap;">
+							<a style="color:black;" href="?type={$type}" class="pager">首页</a>&nbsp;
+							{if $page>1}
+							<a style="color:black;" href="?type={$type}&page={$page-1}" class="pager">上页</a>
+							{else}
+							上页
+							{/if}
+							{section name=sn loop=$countpage}
+								{if $smarty.section.sn.index+1==$page}
+								&nbsp;<span style="color:#ff0000">{$smarty.section.sn.index+1}</span>
+								{else}
+								&nbsp;<a style="color:black;" href="?type={$type}&page={$smarty.section.sn.index+1}" class="pager">{$smarty.section.sn.index+1}</a>
+								{/if}
+							{/section}
+							&nbsp;{if $page<$countpage}<a style="color:black;" href="?type={$type}&page={$page+1}" class="pager">下页</a>{else}下页{/if}
+							&nbsp;<a style="color:black;" href="?type={$type}&page={$countpage}" class="pager">尾页</a>&nbsp;</div></div>
+                            <div class="clear">
+                            </div>
+                        </div>
+                    
+</div>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+    </div>
+    
+ {include file='footer.html'}
+
+</body>
+</html>

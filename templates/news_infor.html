@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=gb2312" /><title>
+	擎翌智能-{$arrtext[$type]}-{$pinfor.title}
+</title>
+<meta name="keywords" content="智能交通，擎翌，智慧停车，智慧公交，擎翌智能科技有限公司" />
+<meta name="description" content="擎翌智能科技有限公司提供智能交通、智慧停车、智慧公交等高科技智能交通解决方案" />
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/jquery.db_tabmotionbanner.min.js"></script>
+    <link href="css/common.css" rel="stylesheet" /><link rel="stylesheet" href="css/style.css" /><link href="css/mycss.css" rel="stylesheet" />
+    <script type="text/javascript">
+        $(function () {
+            $(".top1SS").mouseover(function () {
+                $(".top1RSS").show();
+            }).mouseout(function () {
+                $(".top1RSS").hide();
+            });
+            $(".top1RSS").mouseover(function () {
+                $(".top1RSS").show();
+                $(".top1SS").addClass("top1SSSel");
+            }).mouseout(function () {
+                $(".top1RSS").hide();
+                $(".top1SS").removeClass("top1SSSel");
+            });
+        })
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $(".top1Nav").mouseover(function () {
+                $(".topRightNav").show();
+            }).mouseout(function () {
+                $(".topRightNav").hide();
+            });
+            $(".topRightNav").mouseover(function () {
+                $(".topRightNav").show();
+                $(".top1Nav").addClass("top1NavSel");
+            }).mouseout(function () {
+                $(".topRightNav").hide();
+                $(".top1Nav").removeClass("top1NavSel");
+            });
+        })
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $(window).scroll(function () {
+                if ($(window).scrollTop() == 0) {
+                    $(".top1").fadeIn(200);
+                }
+                else {
+                    $(".top1").fadeOut(0);
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $(".floatClose").click(function () { $(".leftFloat").hide(); })
+        })
+    </script>
+    <!--[if IE 6]>
+ <script src="js/PNGfix.js"></script>
+ <script>
+   DD_belatedPNG.fix('IMG,div,input,png');
+ </script>
+<![endif]-->
+    <script type="text/javascript">
+        function aa() {
+            var tab = document.getElementById("soso").value;
+            document.location = 'productslist.aspx?name=' + tab;
+        }
+    </script>
+    
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+            $("#m3").addClass("mainNavActive");
+
+            $("#about").addClass("aa");
+            //            $("#news").addClass("aa");
+            $("#solutions").addClass("aa");
+            $("#case").addClass("aa");
+            $("#contact").addClass("aa");
+            $("#pro").addClass("aa");
+			$("#service").addClass("aa");
+            $("#cooperation").addClass("aa");
+        }); 
+    </script>
+    <style type="text/css">
+    .aa
+    {
+        display: none;
+        }
+    </style>
+</head>
+<body>
+	{include file='header.html'}
+    
+    <div class="content">
+        <div class="nyMainTu">
+        </div>
+        <div class="nyMain">
+            
+	{include file='left.html'}
+	
+            <div class="nyMainRight">
+                <h1 class="nyMainRightH1">
+                    <span>
+                        <img alt="" src="images/nyIco.jpg" />
+                        首页 &gt; 新闻中心 &gt;
+                        {$arrtext[$type]}</span>{$arrtext[$type]}</h1>
+                <div class="nyMainNewsC">
+                    <div class="n_title">
+                        <span id="ContentPlaceHolder1_lblnewstitle">{$pinfor.title}</span></div>
+                    <div class="n_laiy">
+                        发布时间：<span id="ContentPlaceHolder1_lbl_newstime">{$pinfor.addtime}</span></div>
+                    <div class="n_cont">
+                        <span id="ContentPlaceHolder1_lblContent">
+						{$pinfor.content}
+</span>
+                    </div>
+                    <div class="nyMainNewsC2">
+                        <span class="nyMainNewsShare">分享到：</span>
+                        <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+{literal}<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>{/literal}
+                        <div class="clear">
+                        </div>
+                        <div class="nyMainNewsTitle">
+                            <div id="showfirst">上一篇：<a href="newsshow.aspx?id=0&type=4"></a><br /></div>
+                            <div id="shownext">下一篇：<a href="news_infor.php?id={$nextpinfor.id}&type={$nextpinfor.type}">{$nextpinfor.title}</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+    </div>
+    {include file='footer.html'}
+
+<script type="text/javascript">
+//<![CDATA[
+$("#showfirst").hide();//]]>
+</script>
+</body>
+</html>
